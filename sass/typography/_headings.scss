@@ -1,3 +1,14 @@
 h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
 	clear: both;
 }
+
+.entry-title {
+	writing-mode: vertical-rl;
+	font-size: 15vh;
+	transform: rotate(180deg);
+	float: left;
+	-webkit-writing-mode: vertical-rl; /* Saf 5.1+ */
+     -moz-writing-mode: vertical-rl; /* Fx 6.0+ */
+      -ms-writing-mode: vertical-rl; /* IE 10+ */
+  }
