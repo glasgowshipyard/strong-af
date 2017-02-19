@@ -1,8 +1,8 @@
 # Travis CI configuration file.
 # @link https://travis-ci.org/
 
-# For use with the Twenty Sixteen WordPress theme
-# @link https://github.com/WordPress/twentysixteen/
+# For use with the Strong AF WordPress theme
+# @link https://github.com/glasgowshipyard/strong-af
 
 # Declare project language and PHP versions to test against.
 # @link http://about.travis-ci.org/docs/user/languages/php/
