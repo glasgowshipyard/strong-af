@@ -41,6 +41,61 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "ParadoxRuna";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rift-Demi";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Native-Regular";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prohibition-Regular";
+  font-weight: normal;
+  font-variant-alternates: stylistic(salt 2);
+}
+@font-face {
+  font-family: "Prohibition-Oblique";
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Prohibition-Round";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prohibition-RoundOblique";
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Prohibition-Rough";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prohibition-RoughOblique";
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Prohibition-Lines";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Prohibition-LinesOblique";
+  font-weight: normal;
+  font-style: italic;
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -264,7 +319,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Native", sans-serif;
+  font-family: "Native-Regular", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -273,19 +328,18 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   clear: both;
+  font-family: "Prohibition-Regular", sans-serif;
 }
 
 .entry-title {
-  writing-mode: vertical-rl;
-  font-size: 15vh;
-  transform: rotate(180deg);
-  float: left;
-  -webkit-writing-mode: vertical-rl;
-  /* Saf 5.1+ */
-  -moz-writing-mode: vertical-rl;
-  /* Fx 6.0+ */
-  -ms-writing-mode: vertical-rl;
-  /* IE 10+ */
+  font-family: "Rift-Demi", sans-serif;
+  	/*writing-mode: vertical-rl;
+  	font-size: 15vh;
+  	transform: rotate(180deg);
+  	float: left;
+  	-webkit-writing-mode: vertical-rl; /* Saf 5.1+
+       -moz-writing-mode: vertical-rl; /* Fx 6.0+ 
+        -ms-writing-mode: vertical-rl; /* IE 10+ */
 }
 
 p {
@@ -336,6 +390,65 @@ big {
   font-size: 125%;
 }
 
+@font-face {
+  font-family: 'ParadoxRuna';
+  src: url("webfonts/32E790_0_0.eot");
+  src: url("webfonts/32E790_0_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_0_0.woff2") format("woff2"), url("webfonts/32E790_0_0.woff") format("woff"), url("webfonts/32E790_0_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition-Round';
+  src: url("webfonts/32E790_1_0.eot");
+  src: url("webfonts/32E790_1_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_1_0.woff2") format("woff2"), url("webfonts/32E790_1_0.woff") format("woff"), url("webfonts/32E790_1_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition-Rough';
+  src: url("webfonts/32E790_2_0.eot");
+  src: url("webfonts/32E790_2_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_2_0.woff2") format("woff2"), url("webfonts/32E790_2_0.woff") format("woff"), url("webfonts/32E790_2_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition';
+  font-weight: normal;
+  font-style: italic;
+  src: url("webfonts/32E790_3_0.eot");
+  src: url("webfonts/32E790_3_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_3_0.woff2") format("woff2"), url("webfonts/32E790_3_0.woff") format("woff"), url("webfonts/32E790_3_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition-Lines';
+  src: url("webfonts/32E790_4_0.eot");
+  src: url("webfonts/32E790_4_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_4_0.woff2") format("woff2"), url("webfonts/32E790_4_0.woff") format("woff"), url("webfonts/32E790_4_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition';
+  font-weight: normal;
+  font-style: normal;
+  src: url("webfonts/32E790_5_0.eot");
+  src: url("webfonts/32E790_5_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_5_0.woff2") format("woff2"), url("webfonts/32E790_5_0.woff") format("woff"), url("webfonts/32E790_5_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition-RoughOblique';
+  src: url("webfonts/32E790_6_0.eot");
+  src: url("webfonts/32E790_6_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_6_0.woff2") format("woff2"), url("webfonts/32E790_6_0.woff") format("woff"), url("webfonts/32E790_6_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition-LinesOblique';
+  src: url("webfonts/32E790_7_0.eot");
+  src: url("webfonts/32E790_7_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_7_0.woff2") format("woff2"), url("webfonts/32E790_7_0.woff") format("woff"), url("webfonts/32E790_7_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Prohibition-RoundOblique';
+  src: url("webfonts/32E790_8_0.eot");
+  src: url("webfonts/32E790_8_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_8_0.woff2") format("woff2"), url("webfonts/32E790_8_0.woff") format("woff"), url("webfonts/32E790_8_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Rift-Demi';
+  src: url("webfonts/32E790_9_0.eot");
+  src: url("webfonts/32E790_9_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_9_0.woff2") format("woff2"), url("webfonts/32E790_9_0.woff") format("woff"), url("webfonts/32E790_9_0.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Native-Regular';
+  src: url("webfonts/32E790_A_0.eot");
+  src: url("webfonts/32E790_A_0.eot?#iefix") format("embedded-opentype"), url("webfonts/32E790_A_0.woff2") format("woff2"), url("webfonts/32E790_A_0.woff") format("woff"), url("webfonts/32E790_A_0.ttf") format("truetype");
+}
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -351,7 +464,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #fcedc4;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -506,6 +619,7 @@ a:visited {
 }
 a:hover, a:focus, a:active {
   color: midnightblue;
+  transition: all 0.5s ease;
 }
 a:focus {
   outline: thin dotted;
@@ -522,6 +636,10 @@ a:hover, a:active {
   display: block;
   float: left;
   width: 100%;
+  font-family: "Prohibition-Regular", sans-serif;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #dbbc38;
 }
 .main-navigation ul {
   display: none;
@@ -530,12 +648,12 @@ a:hover, a:active {
   padding-left: 0;
 }
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
   top: 1.5em;
   left: -999em;
   z-index: 99999;
+  background: rgba(0, 0, 0, 0.9);
 }
 .main-navigation ul ul ul {
   left: -999em;
@@ -552,12 +670,17 @@ a:hover, a:active {
   left: auto;
 }
 .main-navigation li {
-  float: left;
+  float: right;
   position: relative;
+  padding: 0 .5em;
+}
+.main-navigation li:hover > a, .main-navigation li.focus > a {
+  color: #da2029;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
+  color: #fcedc4;
 }
 
 /* Small menu. */
@@ -738,6 +861,33 @@ a:hover, a:active {
 
 .bypostauthor {
   display: block;
+}
+
+.site-footer {
+  background: #da2029;
+  color: #fcedc4;
+  font-family: "Prohibition-Regular", sans-serif;
+  text-align: center;
+}
+
+.site-footer a {
+  color: #fcedc4;
+  text-decoration: none;
+}
+.site-footer a:visited {
+  color: #fcedc4;
+  font-family: "Prohibition-Lines", sans-serif;
+}
+.site-footer a:hover, .site-footer a:focus, .site-footer a:active {
+  color: #fcedc4;
+  transition: all 0.5s ease;
+  font-family: "Prohibition-Lines", sans-serif;
+}
+.site-footer a:focus {
+  outline: thin dotted;
+}
+.site-footer a:hover, .site-footer a:active {
+  outline: 0;
 }
 
 /*--------------------------------------------------------------

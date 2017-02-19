@@ -1,0 +1,93 @@
+section#begin.sticky-header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: $blackened-af;
+}
+
+.skip-me {
+  display: inherit;
+}
+.unhide {
+  display: block;
+}
+
+.site-branding {
+	background: $blackened-af;
+}
+
+.site-description {
+	font-family: $dova,$rift,$native;
+}
+
+path#Tree,
+g#Leaves {
+	fill: $commie-af;
+}
+
+.display {
+	display: block !important;
+}
+
+.unendisplay {
+	visibility: hidden;
+}
+
+.strong-af {
+	width: 23vw;
+	height: 22vw;
+	//padding-top: 48%;
+	position: relative;
+	margin: auto;
+}
+#yggdrasil{
+	width: 50%;
+	position: relative;
+	float: left;
+	display: none;
+}
+
+.yggdrasil {
+	width: $logos;
+	height: $logos;
+	position: relative;
+	float: left;	
+}
+
+.site-title {
+	font-size: 3.5em;
+	position: absolute;
+	left: $logos;
+	padding: .1em 0;
+	
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.strong-af-title {
+font-size: 1.5vw;
+-webkit-transform: rotate(-30deg);
+transform: rotate(-30deg);
+position: absolute;
+left: 53.5%;
+top: 79%;
+font-family: $futhark, $trong-af, sans-serif;
+font-weight: normal;
+}
+
+.strong-af-title a {
+	text-decoration: none;
+	color: $commie-af;
+}
+
+path#Shield {
+fill: $blackened-af;
+stroke: $commie-af;
+stroke-width: 10px;
+}

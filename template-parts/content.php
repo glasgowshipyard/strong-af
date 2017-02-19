@@ -19,15 +19,13 @@
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php strong_af_posted_on(); ?>
-		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
+		
+			TL;DR: <?php the_excerpt();
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'strong-af' ), array( 'span' => array( 'class' => array() ) ) ),

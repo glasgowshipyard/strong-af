@@ -1,0 +1,30 @@
+.site-footer {
+	background:$red-af;
+	color: $commie-af;
+	font-family: $trong-af;
+	text-align: center;
+}
+
+.site-footer a {
+	color: $commie-af;
+	text-decoration: none;
+
+	&:visited {
+		color: $commie-af;
+		font-family: $trong-af-lines;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $commie-af;
+		transition: $transition;
+		font-family: $trong-af-lines;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}

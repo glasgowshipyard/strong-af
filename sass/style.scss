@@ -93,7 +93,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+@import "site/header";
 @import "site/site";
+@import "site/footer";
+@import "site/woo";
+@import "site/animatronics";
 
 /*--------------------------------------------------------------
 # Infinite scroll

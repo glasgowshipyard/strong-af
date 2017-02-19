@@ -1,45 +1,39 @@
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
-_s
+Glasgow Shipyard
 ===
+Building websites that WORK
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+Glasgow Shipyard believes you should have a website that is usable to both you and the people viewing it.
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A custom header implementation in `inc/custom-header.php` just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+We do this by building websites that work.
 
-Getting Started
----------------
+There is an industry standard out there. It revolves around expensive design companies with a 90’s understanding of how the internet works producing Photoshop “mockups”, developers using bootstrap templates, and marketers with their tripwires, artificial scarcity, business masterminds and market penetration. It’s also largely total bullshit.
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+The industry standard is an effective way of saying the worst of the homogenous web. Characterless and bloated (but probably very pretty), with *minutes* of work poured into customising some template for a site design that looks like every other one, resulting in your business being treated in exactly the same manner: pointless.
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium`), and then you'll need to do a five-step find and replace on the name in all the templates.
+Glasgow Shipyard looks at things a wee bit differently. Here are our rules:
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in style.css.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+Understand Your Purpose and Your People.
 
-OR
+A site must convey your purpose and know who it’s talking to before anything else happens.
 
-* Search for: `'_s'` and replace with: `'megatherium'`
-* Search for: `_s_` and replace with: `megatherium_`
-* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
-* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_s-` and replace with: `megatherium-`
+Functionality Beats Fancy
 
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
+A site must work before it has nifty transitions and parallax scrolling of giant images.
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+Responsibly Responsive
 
-Good luck!
+A site must be usable on any size of device, from smallest to largest.
+
+Lightweight AF
+
+A site must have the fewest lines of code possible, allowing fast loading wherever you are in the world.
+
+Haun Built Fae Scratch
+
+A site design must be as close to hand built from scratch* as is reasonable. Adapting templates and frameworks is an excellent way to part you from cash while someone else worked harder for longer for less. That’s not cool.
+
+Glasgow Shipyard build sites on top of '_s' from Automattic.
+
