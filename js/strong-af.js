@@ -2,10 +2,8 @@ jQuery( document ).ready( function( $ ){
 
 	/* Stick navigation to the top of the page */
 	var stickyNavTop = $( 'section#begin' ).offset().top; 
-
 	$( window ).scroll( function(){  
 		var scrollTop = $( window ).scrollTop();  
-
 		if ( scrollTop > stickyNavTop ) {   
 			$( 'section#begin' ).addClass( 'sticky-header' ); 
 			$( '#yggdrasil' ).addClass( 'display' );
