@@ -122,6 +122,29 @@ function strong_af_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'strong_af_scripts' );
 
+function strong_af_site_icon() {
+  echo '<style type="text/css">
+    h1 a {
+      background-image: url(' . get_site_icon_url(). ') !important;
+    }
+  </style>';
+}
+add_action( 'login_head', 'strong_af_site_icon' );
+
+function strong_af_login() {
+    return get_site_url();
+}
+add_filter( 'login_headerurl', 'strong_af_login' );
+
+function strong_af_login_text() {
+    return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertitle', 'strong_af_login_text' );
+
+
+
+
+
 /**
  * Implement the Custom Header feature.
  */

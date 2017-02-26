@@ -9,3 +9,9 @@
 ## Comments
 --------------------------------------------------------------*/
 @import "primary/comments";
+
+article,
+#comments {
+	width: 75%;
+	margin: auto !important;
+}
