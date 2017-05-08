@@ -1,17 +1,17 @@
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: transparent;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color__link: rgba(0, 0, 0, 1);
+$color__link-visited: rgba(64, 64, 64, 1);
+$color__link-hover: rgba(0, 0, 0, 0.5);
+$color__text-main: rgba(64, 64, 64, 1);
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
@@ -19,10 +19,11 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 
+$abyssal: rgba(0, 0, 0, 0);
+$ashen: rgba(64, 64, 64, 1);
 $commie-af: rgba(255, 255, 255, 1);
 $commie-af-hint: rgba(219, 188, 56, 1);
 $black-af: rgba(0, 0, 0, 1);
 $blackened-af: rgba(0, 0, 0, 0.9);
 $red-af: rgba(218, 32, 41, 1);
-$abyssal: rgba(0, 0, 0, 0);
 

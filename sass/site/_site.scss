@@ -10,8 +10,12 @@
 --------------------------------------------------------------*/
 @import "primary/comments";
 
-article,
+.entry-content,
 #comments {
 	width: 75%;
 	margin: auto !important;
+}
+
+.site-content {
+	margin-top: $logos;
 }

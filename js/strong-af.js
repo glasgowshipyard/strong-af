@@ -16,7 +16,7 @@ jQuery( document ).ready( function( $ ){
 	
 	/* Scroll to specific section on front page */
 		$( function() {
-			$( 'a[href*=#]:not([href=#])' ).click( function(){
+			$( 'a[href*=#]:not([href=#]):not([href=#tab-reviews]):not([href=#tab-description]):not([href=#tab-additional_information])' ).click( function(){
 				if ( location.pathname.replace(/^\//,'' ) === this.pathname.replace( /^\//,'' ) && location.hostname === this.hostname ) {
 					var target = $( this.hash );
 					target = target.length ? target : $( '[name=' + this.hash.slice(1) +']' );

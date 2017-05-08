@@ -22,10 +22,17 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
+	<?php
+		if ( is_single() ) :?>
+			<div id="tl-dr">
+	<h2 class="tl-dr">TL;DR</h2>
+	<?php the_excerpt(); ?>
+	</div>
+<?php
+		endif;
+	?>
 	<div class="entry-content">
-		
-			TL;DR: <?php the_excerpt();
+		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'strong-af' ), array( 'span' => array( 'class' => array() ) ) ),

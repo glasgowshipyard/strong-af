@@ -5,8 +5,8 @@
 	width: 100%;
 	height: $logos;
 	font-family: $trong-af;
-	border-top: 2px solid $commie-af;
-	border-bottom: 2px solid $commie-af;
+	border-top: 2px solid $black-af;
+	border-bottom: 2px solid $black-af;
 
 	ul {
 		display: none;
@@ -67,7 +67,7 @@
 	a {
 		display: block;
 		text-decoration: none;
-		color: $commie-af;
+		color: $black-af;
 	}
 
 	.current_page_item > a,

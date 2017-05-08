@@ -1,10 +1,13 @@
 section#begin.sticky-header {
   position: fixed;
   width: 100%;
-  z-index: 100;
   top: 0;
   left: 0;
-  background: $blackened-af;
+  background: $commie-af;
+}
+
+section#begin {
+	z-index: 999999 !important;
 }
 
 .skip-me {
@@ -15,7 +18,7 @@ section#begin.sticky-header {
 }
 
 .site-branding {
-	background: $blackened-af;
+	background: $commie-af;
 }
 
 .site-description {
@@ -24,7 +27,7 @@ section#begin.sticky-header {
 
 path#Tree,
 g#Leaves {
-	fill: $commie-af;
+	fill: $black-af;
 }
 
 .display {
@@ -84,11 +87,11 @@ font-weight: normal;
 
 .strong-af-title a {
 	text-decoration: none;
-	color: $commie-af;
+	color: $black-af;
 }
 
 path#Shield {
-fill: $blackened-af;
-stroke: $commie-af;
+fill: $commie-af;
+stroke: $black-af;
 stroke-width: 10px;
 }

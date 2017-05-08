@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the footer.
+ * The template for displaying the footer
  *
  * Contains the closing of the #content div and all content after.
  *
@@ -15,9 +15,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'strong-af' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'strong-af' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'strong-af' ), 'strong-af', '<a href="http://glasgowshipyard.com" rel="designer">Glasgow Shipyard</a>' ); ?>
+			<div class="copyright">Copyright &copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?></div>
+			<div class"made-by"><?php printf( esc_html__( 'Hand Built by %2$s', 'strong-af' ), 'strong-af', '<a href="http://glasgowshipyard.com" rel="designer">Glasgow Shipyard</a>' ); ?></div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
