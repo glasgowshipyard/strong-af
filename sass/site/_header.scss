@@ -1,41 +1,39 @@
-section#begin.sticky-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: $commie-af;
-}
-
-section#begin {
-	z-index: 999999 !important;
-}
-
-.skip-me {
-  display: inherit;
-}
-.unhide {
-  display: block;
-}
-
 .site-branding {
 	background: $commie-af;
+	display: block;
+	float: left;
+	width: 100%;
+	height: $logos;
+	font-family: $trong-af;
+	border-top: 2px solid $black-af;
+	border-bottom: 2px solid $black-af;
+	position: fixed;
+	z-index: 4;
+	line-height: 1.7;
 }
 
-.site-description {
-	font-family: $dova,$rift,$native;
+@media screen and (max-width: 37.5em) {
+	.site-branding {
+		line-height: 1.5;
+		height: $logos-mobile;
+		}
+	.yggdrasil {
+		width: $logos-mobile !important;
+		height: $logos-mobile !important;	
+		}
+	.site-title {
+		font-size: 2em !important;
+		left: $logos-mobile !important;
+		position: absolute;
+	}
+	.site-content {
+		margin-top: $logos-mobile;
+		}
 }
 
 path#Tree,
 g#Leaves {
 	fill: $black-af;
-}
-
-.display {
-	display: block !important;
-}
-
-.unendisplay {
-	visibility: hidden;
 }
 
 .strong-af {
@@ -50,8 +48,7 @@ g#Leaves {
 	width: 50%;
 	position: relative;
 	float: left;
-	display: none;
-}
+	}
 
 .yggdrasil {
 	width: $logos;
@@ -62,11 +59,11 @@ g#Leaves {
 
 .site-title {
 	font-size: 3.5em;
-	position: absolute;
 	left: $logos;
 	padding: .1em 0;
-	
 }
+
+
 
 svg {
     position: absolute;
@@ -74,24 +71,8 @@ svg {
     left: 0;
 }
 
-.strong-af-title {
-font-size: 1.5vw;
--webkit-transform: rotate(-30deg);
-transform: rotate(-30deg);
-position: absolute;
-left: 53.5%;
-top: 79%;
-font-family: $futhark, $trong-af, sans-serif;
-font-weight: normal;
-}
-
-.strong-af-title a {
-	text-decoration: none;
-	color: $black-af;
-}
-
-path#Shield {
-fill: $commie-af;
-stroke: $black-af;
-stroke-width: 10px;
+.lootcrate-count {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.4em;
 }

@@ -13,13 +13,26 @@ body {
 }
 
 blockquote, q {
+	font-size: 1.5em;
 	quotes: "" "";
+	padding: 0 2em;
 
-	&:before,
+	&:before{
+		font-family: "fontawesome";
+		content: "\f10d";
+	}
 	&:after {
 		content: "";
 	}
 }
+
+@media screen and (max-width: 37.5em) {
+
+	blockquote, q {
+	font-size: 1em;
+	}
+}
+
 
 hr {
 	background-color: $color__background-hr;

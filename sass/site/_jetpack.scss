@@ -1,0 +1,18 @@
+.sd-social-icon .sd-content ul li[class*=share-].share-twitter a.sd-button,
+.sd-social-icon .sd-content ul li[class*=share-].share-reddit a.sd-button,
+.sd-social-icon .sd-content ul li[class*=share-].share-facebook a.sd-button,
+.sd-social-icon .sd-content ul li[class*=share-].share-telegram a.sd-button {
+	background: $ashen !important;
+	color: $color__background-body !important;
+}
+
+div.wpcnt {
+	clear: both !important;
+}
+
+@media screen and (max-width: 37.5em) {
+	
+	#eu-cookie-law {
+		min-height: 150px;
+		}
+	}

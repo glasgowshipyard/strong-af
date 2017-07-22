@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php.
+ * Template part for displaying blog excerpts.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -11,20 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
-			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				the_post_thumbnail();
-				}
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'strong-af' ),
-				'after'  => '</div>',
-			) );
+			the_excerpt();
 		?>
 	</div><!-- .entry-content -->
 

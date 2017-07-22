@@ -4,8 +4,21 @@ h1 {
 	font-family: $trong-af;
 }
 
+h1.entry-title,
+h1.front {
+	font-size: 9vw;
+	background: $black-af;
+	color: $commie-af;
+	width: 100%;
+	text-align: center;	
+}
+
+h1.grimoire-title {
+	font-size: 2em;
+}
+
 h2, h3, h4, h5, h6,
 .entry-title {
 	font-family: $rift;
-	margin: 0;
+	margin: .5em 0;
 }

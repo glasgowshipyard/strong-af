@@ -10,12 +10,61 @@
 --------------------------------------------------------------*/
 @import "primary/comments";
 
+.entry-title,
 .entry-content,
-#comments {
+.entry-footer,
+.nav-links,
+.woocommerce ul.products,
+#comments,
+#grimoire-entries {
 	width: 75%;
 	margin: auto !important;
 }
 
+#tl-dr {
+	width: 80%;
+	margin: 1em auto;
+}
+
+
+@media screen and (max-width: 37.5em) {
+.entry-title,
+.entry-content,
+.entry-footer,
+.nav-links,
+.woocommerce ul.products,
+#comments,
+#grimoire-entries {
+	width: 90%;
+	margin: auto !important;
+	}
+#tl-dr {
+	width: 95%;
+	margin: 1em auto;
+}
+}
+
+
 .site-content {
 	margin-top: $logos;
+}
+
+#tl-dr,
+#eu-cookie-law {
+	border: 2px solid $blackened-af !important;
+	padding: 1em !important;
+	color: $ashen !important;
+}
+
+#eu-cookie-law input, #eu-cookie-law input:focus, #eu-cookie-law input:hover {
+	text-transform: uppercase !important;
+	font-family: $trong-af !important;
+}
+
+//TRAVOLTA EDIT FOR ADS IN TL;DR
+#tl-dr div.wpcnt,
+#headless div.wpcnt,
+#grimoire-entries div.wpcnt
+ {
+	display: none;
 }
