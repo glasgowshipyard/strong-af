@@ -1,6 +1,6 @@
 jQuery( document ).ready( function( $ ){  
 
-	/* Stick navigation to the top of the page */
+	/* Stick navigation to the top of the page 
 	var stickyNavTop = $( 'section#begin' ).offset().top; 
 	$( window ).scroll( function(){  
 		var scrollTop = $( window ).scrollTop();  
@@ -12,7 +12,7 @@ jQuery( document ).ready( function( $ ){
 			$( '#yggdrasil' ).removeClass( 'display' );
 		}  
 
-	});
+	});*/
 	
 	/* Scroll to specific section on front page */
 		$( function() {

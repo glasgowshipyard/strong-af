@@ -1,3 +1,12 @@
+.site-description {
+	font-family: $dova,$rift,$native;
+	margin: 0 auto;
+	font-size: 4vw;
+	text-align: center;
+	z-index: -1;
+	opacity: .1
+	}
+
 .site-footer {
 	background:$red-af;
 	color: $commie-af;
@@ -8,23 +17,13 @@
 .site-footer a {
 	color: $commie-af;
 	text-decoration: none;
-
-	&:visited {
-		color: $commie-af;
-		font-family: $trong-af-lines;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $commie-af;
-		transition: $transition;
-		font-family: $trong-af-lines;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
 }
+
+@media screen and (max-width: 37.5em) {
+	
+	.site-info {
+		width: 50%;
+		margin: auto;
+		font-size: .75em;
+		}
+	}

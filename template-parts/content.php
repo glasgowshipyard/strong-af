@@ -45,8 +45,4 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php strong_af_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

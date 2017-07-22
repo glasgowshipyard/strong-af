@@ -23,3 +23,15 @@ dt {
 dd {
 	margin: 0 1.5em 1.5em;
 }
+
+.widget ul,
+.widget ol {
+	list-style: none;
+}
+
+@media screen and (max-width: 37.5em) {
+	
+	ul, ol {
+	margin: 0 .2em;
+	}
+}

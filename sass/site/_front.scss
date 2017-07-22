@@ -1,0 +1,40 @@
+#headless img {
+	float: left;
+	max-width: 50%;
+}
+
+@media screen and (max-width: 37.5em) {
+	#headless img {
+		float: none;
+		max-width: 100%;
+	}
+	section.grimoire,
+	.grimoire-excerpt,
+	.grimoire-excerpt {
+		overflow: visible !important;
+	}
+	.grimoire-thumb {
+		max-width: 100%;
+		float: none !important;
+		margin: auto;
+	}
+	h1.grimoire-title {
+		font-size: 1.5em;
+}
+}
+
+#one-hunnit .entry-content {
+	width: 95%;
+	font-family: $trong-af;
+	font-size: 2em;
+}
+
+section.grimoire,
+.grimoire-excerpt {
+	overflow: hidden;
+}
+
+.grimoire-thumb {
+	max-width: 150px;
+	float: left;
+}
