@@ -204,7 +204,7 @@ function lootcrate($menu, $args) {
 		$viewing_cart = __('View your shopping cart', 'strong-af');
 		$start_shopping = __('Start shopping', 'strong-af');
 		$cart_url = $woocommerce->cart->get_cart_url();
-		$shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
+		$shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
 		$cart_contents_count = $woocommerce->cart->cart_contents_count;
 		$cart_contents = sprintf(_n('%d', $cart_contents_count, 'strong-af'), $cart_contents_count);
 		//$cart_total = $woocommerce->cart->get_cart_total();

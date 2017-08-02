@@ -6,10 +6,25 @@
 	color: $color__background-body !important;
 }
 
+
 div.wpcnt {
 	clear: both !important;
 }
 
+input.pushbutton-wide {
+	background: transparent !important;
+	padding: .8em 1em !important;
+}
+@media screen and (min-width: 37.5em) {
+	
+	#eu-cookie-law {
+		min-height: 150px;
+		}
+	.contact-form select {
+    min-width: 300px;
+		}
+	}
+	
 @media screen and (max-width: 37.5em) {
 	
 	#eu-cookie-law {
