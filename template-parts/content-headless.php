@@ -23,9 +23,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-		</div><!-- .headless -->
-	</div><!-- .entry-content -->
-
+			</div><!-- #headless -->
+		</div><!-- .entry-content -->
+	</div><!-- #one-hunnit -->
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php

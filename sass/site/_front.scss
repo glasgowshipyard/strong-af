@@ -1,13 +1,25 @@
 #headless img {
 	float: left;
 	max-width: 50%;
+	padding: 0 .5em;
+}
+
+#headless p {
+	font-size: 3.47vw;
+	padding: 0 1em;
 }
 
 @media screen and (max-width: 37.5em) {
 	#headless img {
 		float: none;
 		max-width: 100%;
+		padding-top: .5em;
 	}
+	#headless p {
+	font-size: 7vw;
+	padding: 0 .5em;
+	}	
+	
 	section.grimoire,
 	.grimoire-excerpt,
 	.grimoire-excerpt {
