@@ -24,7 +24,6 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 			</div>
-			<a href=/legion/><button class="legion">Join the Legion</button></a>
 			<h1 class="front">Articles</h1>
 			<section id="grimoire-entries">
 					<?php 
@@ -41,7 +40,9 @@ get_header(); ?>
 							echo '<div class="grimoire-post">';
 							echo '<a href="' . get_permalink() . '">';
 							echo '<h1 class="grimoire-title">' . get_the_title() . '</h1>';
-							the_post_thumbnail('grimoire-thumb', array('class' => 'alignleft'));
+							echo '<figure class="grimoire-thumb">';
+							the_post_thumbnail('grimoire-pic');
+							echo '</figure>';
 							echo '<div class="grimoire-excerpt">';
 							the_excerpt();
 							echo '</a></div></div>';
@@ -60,9 +61,7 @@ get_header(); ?>
 					/* Restore original Post Data */
 					wp_reset_postdata();
 					?>
-					<a href=/articles/><button class="more-articles">More Articles</button></a>
 			</section><!-- #grimoire-entries -->
-		
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -1,32 +1,7 @@
 .yggdrasil a,
-p.logged-in-as a,
 a {
 	color: $color__link;
 	text-decoration: none;
-	font-style: normal;
-
-	&:visited {
-		color: $color__link;
-	}
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-		transition: $transition;
-	}
-	&:focus {
-		outline: thin dotted;
-	}
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-}
-
-p a {
-	color: $color__link;
-	text-decoration: underline;
-	font-style: italic;
 
 	&:visited {
 		color: $color__link;

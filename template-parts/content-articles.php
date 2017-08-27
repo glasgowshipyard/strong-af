@@ -16,9 +16,6 @@
 
 	<div class="entry-content">
 		<?php
-			if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-				the_post_thumbnail('grimoire-thumb', array('class' => 'alignleft'));
-				}
 			the_excerpt();
 		?>
 	</div><!-- .entry-content -->
