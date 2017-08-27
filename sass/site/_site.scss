@@ -14,6 +14,7 @@
 .entry-content,
 .entry-footer,
 .nav-links,
+.amazon,
 .woocommerce ul.products,
 #comments,
 #grimoire-entries {
@@ -26,6 +27,11 @@
 	margin: 1em auto;
 }
 
+.amazon {
+	color: $wraith;
+	font-size: .65em;
+	padding: 1em;
+}
 
 @media screen and (max-width: 37.5em) {
 .entry-title,
@@ -41,6 +47,9 @@
 #tl-dr {
 	width: 95%;
 	margin: 1em auto;
+}
+.amazon {
+	font-size: .3125em;
 }
 }
 

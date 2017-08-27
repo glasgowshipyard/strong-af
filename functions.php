@@ -41,6 +41,7 @@ function strong_af_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+	add_image_size( 'grimoire-thumb', 150, 9999, FALSE );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -188,6 +189,21 @@ function woocommerce_support() {
 }
 
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+add_filter( 'wp_nav_menu_items', 'my_account_loginout_link', 10, 2 );
+/**
+ * Add WooCommerce My Account Login/Logout to Menu
+ * 
+ * @see https://support.woothemes.com/hc/en-us/articles/203106357-Add-Login-Logout-Links-To-The-Custom-Primary-Menu-Area
+ */
+function my_account_loginout_link( $items, $args ) {
+    if (is_user_logged_in() && $args->theme_location == 'primary') { //change your theme location menu to suit
+        $items .= '<li class="loginout"><a href="'. wp_logout_url( get_permalink( wc_get_page_id( 'shop' ) ) ) .'">Log Out</a></li>'; //change logout link, here it goes to 'shop', you may want to put it to 'myaccount'
+    }
+    elseif (!is_user_logged_in() && $args->theme_location == 'primary') {//change your theme location menu to suit
+        $items .= '<li class="loginout"><a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '" class="loginout">Log In</a></li>';
+    }
+    return $items;
+}
 
 /**
  * Place a cart icon with number of items and total cost in the menu bar.
@@ -281,6 +297,21 @@ add_theme_support( 'infinite-scroll', array(
     'footer' => 'page',
 ) );
 
+//add_filter( 'body_class', 'bbloomer_wc_product_cats_css_body_class' );
+// 
+//function bbloomer_wc_product_cats_css_body_class( $classes ){
+//  if( is_singular( 'product' ) )
+//  {
+//    $custom_terms = get_the_terms(0, 'product_cat');
+//    if ($custom_terms) {
+//      foreach ($custom_terms as $custom_term) {
+//        $classes[] = 'product_cat_' . $custom_term->slug;
+//      }
+//    }
+//  }
+//  return $classes;
+//}
+
 //Insert ads after second paragraph of single post content.
 
 add_filter( 'the_content', 'prefix_insert_post_ads' );
@@ -319,34 +350,19 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
     return $content;
 }
 
-// Include the Google Analytics Tracking Code (ga.js)
-// @ https://developers.google.com/analytics/devguides/collection/gajs/
-function google_analytics_tracking_code(){
+function add_google_analytics() { ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	$propertyID = 'UA-103646906-1'; // GA Property ID
+  ga('create', 'UA-103646906-1', 'auto');
+  ga('send', 'pageview');
 
-	if ($options['ga_enable']) { ?>
-
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', '<?php echo $propertyID; ?>']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
-
-<?php }
-}
-
-// include GA tracking code before the closing head tag
-//add_action('wp_head', 'google_analytics_tracking_code');
-
-// OR include GA tracking code before the closing body tag
- add_action('wp_footer', 'google_analytics_tracking_code');
+</script>
+ <?php }
+add_action('wp_footer', 'add_google_analytics');
 
 /**
  * Implement the Custom Header feature.

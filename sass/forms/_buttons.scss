@@ -2,18 +2,17 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	color: $color__text-input !important;
-	border: 2px solid !important;
-	border-color: $color__border-button !important;
-	//border-radius: 3px;
-	box-shadow: none !important;
-	//@include font-size(0.75);
+	color: $color__text-input;
+	border: 2px solid;
+	border-color: $color__border-button;
+	background-color: $color__background-button;
+	box-shadow: none;
 	line-height: 1;
-	padding: .4em 1em .4em  !important;
+	//padding: .4em 1em .4em  !important;
+	padding: .8em 1em;
 	text-shadow: none;
 	text-transform: uppercase;
 	font-family: $trong-af;
-	//min-width: 140px !important;
 
 	&:hover {
 		border-color: $color__border-button-hover;
@@ -26,4 +25,22 @@ input[type="submit"] {
 		box-shadow: none;
 	}
 	
+}
+
+.more-articles,
+.legion {
+	margin: auto;
+	display: block;
+}
+
+button.legion {
+	border: 2px solid $black-af;
+	background: $black-af;
+	color: $color__background-body;
+}
+
+button.legion:hover {
+	background: $color__background-body;
+	color: $black-af;
+	transition: $transition;
 }
