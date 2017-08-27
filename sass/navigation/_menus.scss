@@ -185,3 +185,32 @@
 		outline: 0;
 	}
 }
+
+li.loginout {
+	border:2px solid black;
+	background: black;
+	&:hover {
+		background: white;
+	}
+	a {
+	color: white;
+	}
+	&:hover > a,
+	&.focus > a
+		{
+		color: black;
+		background: white;
+		//transition: $transition;
+		}
+	}
+
+//li {
+//		float: right;
+//		position: relative;
+//		padding: 0 .5em;
+//
+//		&:hover > a,
+//		&.focus > a {
+//			color: $red-af;
+//		}
+//	}
