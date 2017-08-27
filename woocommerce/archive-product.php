@@ -96,7 +96,7 @@ if ( $count > 0 ){
         echo "<ul class='products'>";
         while ( $products->have_posts() ) {
             $products->the_post();
-          //  echo '<div class="' . $product_category->slug .'"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</a></div>';
+           echo '<div class="' . $product_category->slug .'"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name . '</a></div>';
             wc_get_template_part( 'content', 'product' );
             }
         echo "</ul>";
