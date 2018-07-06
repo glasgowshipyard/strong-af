@@ -187,30 +187,20 @@
 }
 
 li.loginout {
-	border:2px solid black;
-	background: black;
+	border:2px solid $black-af;
+	margin-top: -2px;
+	background: $black-af;
 	&:hover {
-		background: white;
+		background: $noonwraith;
 	}
 	a {
-	color: white;
+	color: $commie-af;
 	}
 	&:hover > a,
 	&.focus > a
 		{
-		color: black;
-		background: white;
+		color: $black-af;
+		background: $noonwraith;
 		//transition: $transition;
 		}
 	}
-
-//li {
-//		float: right;
-//		position: relative;
-//		padding: 0 .5em;
-//
-//		&:hover > a,
-//		&.focus > a {
-//			color: $red-af;
-//		}
-//	}

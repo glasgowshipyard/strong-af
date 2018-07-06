@@ -35,3 +35,23 @@ dd {
 	margin: 0 .2em;
 	}
 }
+
+ul.short-description {
+	padding: 1em .5em;
+	margin: 0;
+}
+
+ul.short-description li {
+	display: block;
+}
+
+i.fa.fa.times.text-red {
+	color: $resilience;
+}
+
+i.fa.fa.check.text-green {
+	color: $nourishment;
+}
+
+
+

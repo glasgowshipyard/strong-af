@@ -60,7 +60,7 @@
     </g>
   </g>
 </svg>
-</div><span class="site-title"><?php bloginfo( 'name' ); ?></a></span></div>
+</div><span class="site-title"><?php bloginfo( 'name' ); ?></a><span class="issn">ISSN No. 2574-5530</span></span></div>
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'strong-af' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'menu' ) ); ?>

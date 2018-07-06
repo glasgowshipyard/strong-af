@@ -148,6 +148,10 @@ dl.variation {
 	padding: .5em;
 }
 
+.woocommerce-product-details__short-description {
+			font-size: .75em;
+		}
+
 a.button,
 	button.button,
 	input.button,
@@ -225,6 +229,11 @@ a.button,
 		.woocommerce div.product {
 			width: 95% !important;
 		}
+		
+		.woocommerce-product-details__short-description {
+			font-size: .5em;
+		}
+		
 		h1.product_title.entry-title {
 		width: 100%;
 		}
@@ -278,5 +287,11 @@ p.demo_store {
 	border: 2px solid $blackened-af !important;
 	padding: 1em !important;
 	color: $ashen !important;
+}
+
+// remove weird fucked up Font Awesome icon that doesn't work
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--legion-memberships a::before {
+	display: none !important;
 }
 

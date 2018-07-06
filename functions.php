@@ -197,10 +197,10 @@ add_filter( 'wp_nav_menu_items', 'my_account_loginout_link', 10, 2 );
  */
 function my_account_loginout_link( $items, $args ) {
     if (is_user_logged_in() && $args->theme_location == 'primary') { //change your theme location menu to suit
-        $items .= '<li class="loginout"><a href="'. wp_logout_url( get_permalink( wc_get_page_id( 'shop' ) ) ) .'">Log Out</a></li>'; //change logout link, here it goes to 'shop', you may want to put it to 'myaccount'
+        $items .= '<li class="loginout"><a href="'. wp_logout_url( get_permalink( wc_get_page_id( 'shop' ) ) ) .'">GTFO</a></li>'; //change logout link, here it goes to 'shop', you may want to put it to 'myaccount'
     }
     elseif (!is_user_logged_in() && $args->theme_location == 'primary') {//change your theme location menu to suit
-        $items .= '<li class="loginout"><a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '" class="loginout">Log In</a></li>';
+        $items .= '<li class="loginout"><a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '" class="loginout">Enter</a></li>';
     }
     return $items;
 }
@@ -247,14 +247,24 @@ function lootcrate($menu, $args) {
 /**
  * Removes coupon form, order notes, and several billing fields if the checkout doesn't require payment
  * Tutorial: http://skyver.ge/c
+ * Modifications by Z - included if else statements to work around 3.3 issues
  */
 function sv_free_checkout_fields() {
 	
-	// Bail we're not at checkout, or if we're at checkout but payment is needed
-	if ( function_exists( 'is_checkout' ) && ( ! is_checkout() || ( is_checkout() && WC()->cart->needs_payment() ) ) ) {
-		return;
-	}
+	if ( function_exists( 'is_checkout' ) && ( ! is_checkout() || ( is_checkout() && ! WC()->cart->needs_payment() ) ) ): //new bit
 	
+	function unrequire_checkout_fields( $fields ) {
+    $fields['billing']['billing_company']['required'] = false;
+    $fields['billing']['billing_phone']['required'] = false;
+    $fields['billing']['billing_address_1']['required'] = false;
+    $fields['billing']['billing_address_2']['required'] = false;    
+    $fields['billing']['billing_city']['required'] = false;
+    $fields['billing']['billing_postcode']['required'] = false;
+    $fields['billing']['billing_state']['required'] = false;
+    $fields['billing']['billing_country']['required'] = false;
+
+    return $fields; //also new - removes fields
+}
 	// remove coupon forms since why would you want a coupon for a free cart??
 	remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 	
@@ -289,6 +299,11 @@ function sv_free_checkout_fields() {
 		echo '<style>.create-account { margin-top: 6em; }</style>';
 	}
 	add_action( 'wp_head', 'print_custom_css' );
+	
+	// Bail we're not at checkout, or if we're at checkout but payment is needed
+	elseif ( function_exists( 'is_checkout' ) && ( ! is_checkout() || ( is_checkout() && WC()->cart->needs_payment() ) ) ) :
+		return;
+	endif;
 }
 add_action( 'wp', 'sv_free_checkout_fields' );
 
@@ -296,23 +311,6 @@ add_theme_support( 'infinite-scroll', array(
     'container' => 'content',
     'footer' => 'page',
 ) );
-
-//add_filter( 'body_class', 'bbloomer_wc_product_cats_css_body_class' );
-// 
-//function bbloomer_wc_product_cats_css_body_class( $classes ){
-//  if( is_singular( 'product' ) )
-//  {
-//    $custom_terms = get_the_terms(0, 'product_cat');
-//    if ($custom_terms) {
-//      foreach ($custom_terms as $custom_term) {
-//        $classes[] = 'product_cat_' . $custom_term->slug;
-//      }
-//    }
-//  }
-//  return $classes;
-//}
-
-//Insert ads after second paragraph of single post content.
 
 add_filter( 'the_content', 'prefix_insert_post_ads' );
 
@@ -363,6 +361,59 @@ function add_google_analytics() { ?>
 </script>
  <?php }
 add_action('wp_footer', 'add_google_analytics');
+
+if ( is_page( 'become-legion' ) && ! is_shop( ) ) {
+   add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_excerpt' );
+}
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options -> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 20;
+  return $cols;
+}
+
+
+add_action( 'wp', 'disable_wordads_selectively' );
+function disable_wordads_selectively() {
+	global $wordads;
+	$user = wp_get_current_user();
+	if ( in_array( 'oak',/*'mighty-oak','ancient-oak','fedaykin',*/ (array) $user->roles ) ) {
+		remove_action( 'wp_head', array( $wordads, 'insert_head_meta' ), 20 );
+		remove_action( 'wp_head', array( $wordads, 'insert_head_iponweb' ), 30 );
+		remove_action( 'wp_enqueue_scripts', array( $wordads, 'enqueue_scripts' ) );
+		remove_filter( 'the_content', array( $wordads, 'insert_ad' ) );
+		remove_filter( 'the_excerpt', array( $wordads, 'insert_ad' ) );
+	}
+}
+
+//add order details to Stripe payment metadata
+function filter_wc_stripe_payment_metadata( $metadata, $order, $source ) {
+    $order_data = $order->get_data();
+    $metadata['Total Tax Charged'] = $order_data['total_tax'];
+    $metadata['Total Shipping Charged'] = $order_data['shipping_total'];
+    $count = 1;
+    foreach( $order->get_items() as $item_id => $line_item ){
+        $item_data = $line_item->get_data();
+        $product = $line_item->get_product();
+        $product_name = $product->get_name();
+        $item_quantity = $line_item->get_quantity();
+        $item_total = $line_item->get_total();
+        $metadata['Line Item '.$count] = 'Product name: '.$product_name.' | Quantity: '.$item_quantity.' | Item total: '. number_format( $item_total, 2 );
+        $count += 1;
+    }
+
+    return $metadata;
+}
+add_filter( 'wc_stripe_payment_metadata', 'filter_wc_stripe_payment_metadata', 10, 3 );
+
+function enable_svg_upload( $upload_mimes ) {
+	$upload_mimes['svg'] = 'image/svg+xml';
+	$upload_mimes['svgz'] = 'image/svg+xml';
+	return $upload_mimes;
+}
+add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
 
 /**
  * Implement the Custom Header feature.

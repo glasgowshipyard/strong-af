@@ -1,5 +1,5 @@
 .site-branding {
-	background: $commie-af;
+	background: $noonwraith;
 	display: block;
 	float: left;
 	width: 100%;
@@ -26,6 +26,11 @@
 		left: $logos-mobile !important;
 		position: absolute;
 	}
+	.issn {
+		font-size: .5em;
+		margin: 45px 0 0 $logos-mobile !important;
+}
+	
 	.site-content {
 		margin-top: $logos-mobile;
 		}
@@ -60,6 +65,13 @@ g#Leaves {
 	font-size: 3.5em;
 	left: $logos;
 	padding: .1em 0;
+}
+
+.issn {
+	color: $black-af;
+	display: block;
+	line-height: 0;
+	margin: -1em 6.6em;
 }
 
 
